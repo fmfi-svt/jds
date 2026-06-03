@@ -1,0 +1,124 @@
+.form-input,
+.form-select {
+  display: block;
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  transition: border-color 0.15s;
+}
+
+.form-input::placeholder {
+  color: var(--color-gray-500);
+}
+
+.form-input:hover,
+.form-select:hover {
+  border-color: var(--color-gray-500);
+}
+
+.form-input:focus,
+.form-select:focus {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 1px;
+  border-color: var(--color-primary);
+}
+
+
+.form-input--error {
+  border-color: var(--color-error);
+}
+
+.form-input--error:focus {
+  outline-color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+
+.form-input:disabled,
+.form-select:disabled {
+  background: var(--color-surface-alt);
+  color: var(--color-gray-500);
+  cursor: not-allowed;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a7a7a' d='M6 8.825a.5.5 0 0 1-.354-.146l-4-4a.5.5 0 0 1 .708-.708L6 7.618l3.646-3.647a.5.5 0 0 1 .708.708l-4 4A.5.5 0 0 1 6 8.825Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: calc(var(--space-4) + 1rem);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 5lh;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text);
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset .form-label {
+  margin-bottom: var(--space-2);
+}
+
+.form-help {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-gray-500);
+}
+
+.form-error {
+  display: block;
+  margin-top: var(--space-1);
+  font-size: var(--text-xs);
+  color: var(--color-error);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  cursor: pointer;
+}
+
+.form-check input {
+  accent-color: var(--color-primary);
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.form-row {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.form-row .form-input {
+  width: auto;
+  flex: 1;
+}

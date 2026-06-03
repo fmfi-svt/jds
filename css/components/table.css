@@ -1,0 +1,70 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  line-height: var(--leading-snug);
+  font-variant-numeric: tabular-nums;
+}
+
+.table th,
+.table td {
+  padding: var(--space-2);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.table th {
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  border-bottom: 2px solid var(--color-gray-300);
+}
+
+.table tbody tr:hover {
+  background: var(--color-surface-alt);
+}
+
+.table tr.row--highlight {
+  background: var(--color-warning-light);
+}
+
+.table tr.row--highlight:hover {
+  background: color-mix(in srgb, var(--color-warning-light), var(--color-surface-alt));
+}
+
+
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-scroll .table {
+  min-width: 100%;
+}
+
+.table-actions {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.table-action {
+  color: var(--color-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.table-action:hover {
+  text-decoration: underline;
+}
+
+.table-action--danger {
+  color: var(--color-error);
+}
+
+.table-action--danger:hover {
+  color: var(--color-error);
+}
