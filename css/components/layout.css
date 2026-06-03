@@ -9,7 +9,6 @@
   padding-block: var(--space-7);
 }
 
-
 .grid {
   display: grid;
   gap: var(--space-4);

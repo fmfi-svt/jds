@@ -35,7 +35,9 @@
   font-size: var(--text-sm);
   color: var(--color-text);
   text-decoration: none;
-  transition: background-color 0.15s, color 0.15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
 }
 
 .sidebar__link:hover {
@@ -54,12 +56,10 @@
   color: var(--color-app);
 }
 
-
 .dashboard__main {
   padding: var(--space-5);
   overflow-y: auto;
 }
-
 
 @media (max-width: 48em) {
   .dashboard {

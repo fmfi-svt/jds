@@ -107,7 +107,6 @@
   padding: var(--space-1) var(--space-2);
 }
 
-
 @media (max-width: 48em) {
   .navbar__toggle {
     display: inline-flex;

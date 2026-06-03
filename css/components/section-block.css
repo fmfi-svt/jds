@@ -34,10 +34,10 @@
   max-width: var(--container-sm);
 }
 
-.section-block__body> :first-child {
+.section-block__body > :first-child {
   margin-top: 0;
 }
 
-.section-block__body> :last-child {
+.section-block__body > :last-child {
   margin-bottom: 0;
 }

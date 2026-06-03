@@ -29,9 +29,12 @@
 }
 
 .table tr.row--highlight:hover {
-  background: color-mix(in srgb, var(--color-warning-light), var(--color-surface-alt));
+  background: color-mix(
+    in srgb,
+    var(--color-warning-light),
+    var(--color-surface-alt)
+  );
 }
-
 
 .table-scroll {
   overflow-x: auto;

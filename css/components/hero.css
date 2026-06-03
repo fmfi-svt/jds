@@ -39,7 +39,11 @@
 }
 
 .hero__actions .btn--primary:hover {
-  background-color: color-mix(in srgb, var(--color-app-text) 85%, var(--color-app));
+  background-color: color-mix(
+    in srgb,
+    var(--color-app-text) 85%,
+    var(--color-app)
+  );
   border-color: color-mix(in srgb, var(--color-app-text) 85%, var(--color-app));
 }
 

@@ -29,7 +29,6 @@
   border-color: var(--color-primary);
 }
 
-
 .form-input--error {
   border-color: var(--color-error);
 }
@@ -38,7 +37,6 @@
   outline-color: var(--color-error);
   border-color: var(--color-error);
 }
-
 
 .form-input:disabled,
 .form-select:disabled {

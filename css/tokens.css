@@ -1,9 +1,9 @@
 :root {
   /* ── Typography ──────────────────────────────────── */
 
-  --font-heading: 'UK Sans', system-ui, sans-serif;
-  --font-body: 'Inter', system-ui, sans-serif;
-  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  --font-heading: "UK Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
