@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMFI JDS — Marketing Example</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </head>
+  <body>
+    <!-- Institutional header -->
+    <header class="institutional-header">
+      <div class="institutional-header__inner">
+        Oficiálna stránka
+        <a href="https://fmph.uniba.sk">
+          Fakulty matematiky, fyziky a informatiky UK
+        </a>
+      </div>
+    </header>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <a href="#" class="navbar__brand">Moja FMFI</a>
+        <button
+          class="navbar__toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <iconify-icon
+            icon="lucide:menu"
+            class="navbar__toggle-open"
+            width="22"
+          ></iconify-icon>
+          <iconify-icon
+            icon="lucide:x"
+            class="navbar__toggle-close"
+            width="22"
+          ></iconify-icon>
+        </button>
+        <div class="navbar__nav" id="main-nav">
+          <a href="#" class="navbar__link navbar__link--active">Domov</a>
+          <a href="#" class="navbar__link">Pre študentov</a>
+          <a href="#" class="navbar__link">Pre učiteľov</a>
+          <a href="#" class="navbar__link">Kontakty</a>
+          <span class="navbar__divider"></span>
+          <a href="#" class="navbar__link">Prihlásiť sa</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Vaše štúdium,<br />na jednom mieste.</h1>
+        <p class="hero__subtitle">
+          Prihlasovanie na predmety, rozvrh hodín, známky, osobné údaje — všetky
+          služby Fakulty matematiky, fyziky a informatiky UK na jednom mieste.
+        </p>
+        <div class="hero__actions">
+          <a href="#" class="btn btn--primary">Prihlásiť sa cez UK ID</a>
+          <a href="#" class="btn btn--ghost">Zistiť viac</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Pre študentov -->
+    <section class="section-block">
+      <div class="section-block__inner">
+        <h2 class="section-block__title">Pre študentov</h2>
+        <p class="section-block__subtitle">
+          Všetko, čo potrebujete pre váš študentský život na FMFI.
+        </p>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Prihlasovanie na predmety</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Jednoduché prihlasovanie a odhlasovanie z predmetov. Prehľadný
+                zoznam dostupných predmetov, rozvrhy a kapacity.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Rozvrh hodín</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Interaktívny rozvrh s možnosťou exportu. Nikdy nezabudnite, kde
+                a kedy máte prednášku.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Známky a skúšky</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Okamžitý prehľad o vašich známkach, termínoch skúšok a študijnom
+                prospechu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Pre učiteľov -->
+    <section class="section-block">
+      <div class="section-block__inner">
+        <h2 class="section-block__title">Pre učiteľov</h2>
+        <p class="section-block__subtitle">
+          Nástroje na efektívnu správu výučby a komunikáciu so študentmi.
+        </p>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Správa predmetov</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Vytvárajte a spravujte predmety, nahrávajte materiály a zadania
+                pre študentov.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Zápis známok</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Rýchle a prehľadné zadávanie známok. Štatistiky prospechu na
+                úrovni predmetu.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Termíny skúšok</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                Nastavte termíny, kapacity a miestnosti. Automatické notifikácie
+                pre študentov.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Štatistiky -->
+    <section class="section-block">
+      <div class="section-block__inner">
+        <h2 class="section-block__title">FMFI v číslach</h2>
+        <p class="section-block__subtitle">
+          Fakulta matematiky, fyziky a informatiky v prehľade.
+        </p>
+        <div class="grid grid--4">
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">3 200</div>
+              <div class="card__stat-label">Študentov</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">450</div>
+              <div class="card__stat-label">Zamestnancov</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">180</div>
+              <div class="card__stat-label">Predmetov</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">7</div>
+              <div class="card__stat-label">Katedier</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: CTA -->
+    <section class="section-block">
+      <div class="section-block__inner">
+        <h2 class="section-block__title">Začnite ešte dnes</h2>
+        <p class="section-block__subtitle">
+          Prihláste sa pomocou svojho UK účtu a získajte prístup ku všetkým
+          službám fakulty.
+        </p>
+        <div class="btn-group">
+          <a href="#" class="btn btn--primary">Prihlásiť sa cez UK ID</a>
+          <a href="#" class="btn btn--ghost">Potrebujete pomoc?</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© 2026 ŠVT FMFI UK</span>
+        <span>
+          <a href="#">Ochrana súkromia</a> ·
+          <a href="#">Podmienky používania</a> · <a href="#">Kontakty</a> ·
+          <a href="#">Pomoc</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>

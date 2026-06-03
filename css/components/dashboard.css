@@ -1,8 +1,8 @@
 .dashboard {
   display: grid;
   grid-template-columns: 15rem 1fr;
-  min-height: calc(100vh - 3.5rem);
-  /* subtract navbar height */
+  min-height: calc(100vh - 3.5rem - 2.4rem);
+  /* subtract navbar height, institutional header */
 }
 
 .sidebar {

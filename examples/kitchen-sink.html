@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMFI JDS — Kitchen Sink</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <style>
+      /* Layout helper for the kitchen sink page only */
+      .section {
+        margin-block: var(--space-7);
+      }
+      .section-title {
+        margin-bottom: var(--space-4);
+        padding-bottom: var(--space-1);
+        border-bottom: 2px solid var(--color-border);
+      }
+      .swatch-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+      }
+      .swatch {
+        width: 6rem;
+        text-align: center;
+      }
+      .swatch-sample {
+        width: 6rem;
+        height: 4rem;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--color-border);
+      }
+      .swatch-name {
+        font-size: var(--text-xs);
+        margin-top: var(--space-1);
+      }
+      .example-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-2);
+        align-items: start;
+      }
+    </style>
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </head>
+  <body>
+    <header class="institutional-header">
+      <div class="institutional-header__inner">
+        Oficiálna stránka
+        <a href="https://fmph.uniba.sk">
+          Fakulty matematiky, fyziky a informatiky UK
+        </a>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <a href="#" class="navbar__brand">
+          <iconify-icon icon="lucide:flask-conical" width="20"></iconify-icon>
+          Používatelia
+        </a>
+        <button
+          class="navbar__toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <iconify-icon
+            icon="lucide:menu"
+            class="navbar__toggle-open"
+            width="22"
+          ></iconify-icon>
+          <iconify-icon
+            icon="lucide:x"
+            class="navbar__toggle-close"
+            width="22"
+          ></iconify-icon>
+        </button>
+        <div class="navbar__nav" id="main-nav">
+          <a href="#" class="navbar__link navbar__link--active">
+            <iconify-icon
+              icon="lucide:layout-dashboard"
+              width="16"
+            ></iconify-icon>
+            Prehľad
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon
+              icon="lucide:graduation-cap"
+              width="16"
+            ></iconify-icon>
+            Predmety
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon icon="lucide:calendar" width="16"></iconify-icon>
+            Rozvrh
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon icon="lucide:settings" width="16"></iconify-icon>
+            Nastavenia
+          </a>
+          <span class="navbar__divider"></span>
+          <span class="navbar__text">
+            <iconify-icon icon="lucide:user-circle" width="16"></iconify-icon>
+            Jan Novák
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container container--padded">
+      <!-- ==================== PAGE HEADER + BREADCRUMBS ==================== -->
+      <nav class="breadcrumbs">
+        <a href="#">Domov</a>
+        <span class="breadcrumbs__separator">/</span>
+        <a href="#">Správa používateľov</a>
+        <span class="breadcrumbs__separator">/</span>
+        <span class="breadcrumbs__current">Nový používateľ</span>
+      </nav>
+
+      <div class="page-header">
+        <div>
+          <h1 class="page-header__title">Používatelia</h1>
+          <p class="page-header__subtitle">
+            Správa registrovaných používateľov systému
+          </p>
+        </div>
+        <div class="page-header__actions">
+          <button class="btn btn--ghost">
+            <iconify-icon icon="lucide:download" width="16"></iconify-icon>
+            Exportovať
+          </button>
+          <button class="btn btn--primary">
+            <iconify-icon icon="lucide:plus" width="16"></iconify-icon> Pridať
+            používateľa
+          </button>
+        </div>
+      </div>
+
+      <!-- ==================== COLORS ==================== -->
+      <section class="section" id="colors">
+        <h2 class="section-title">Colors</h2>
+        <p>Primary and semantic color tokens.</p>
+        <br />
+        <h3>Brand</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-brand-dark)"
+            ></div>
+            <div class="swatch-name">brand-dark</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-brand)"
+            ></div>
+            <div class="swatch-name">brand</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-brand-light)"
+            ></div>
+            <div class="swatch-name">brand-light</div>
+          </div>
+        </div>
+        <br />
+        <h3>Neutral</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-neutral-dark)"
+            ></div>
+            <div class="swatch-name">neutral-dark</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-neutral)"
+            ></div>
+            <div class="swatch-name">neutral</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-neutral-light)"
+            ></div>
+            <div class="swatch-name">neutral-light</div>
+          </div>
+        </div>
+        <br />
+        <h3>Grays</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-gray-900)"
+            ></div>
+            <div class="swatch-name">gray-900</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-gray-700)"
+            ></div>
+            <div class="swatch-name">gray-700</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-gray-500)"
+            ></div>
+            <div class="swatch-name">gray-500</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-gray-300)"
+            ></div>
+            <div class="swatch-name">gray-300</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-gray-100)"
+            ></div>
+            <div class="swatch-name">gray-100</div>
+          </div>
+        </div>
+        <br />
+        <h3>Semantic</h3>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-success)"
+            ></div>
+            <div class="swatch-name">success</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-success-light)"
+            ></div>
+            <div class="swatch-name">success-light</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-warning)"
+            ></div>
+            <div class="swatch-name">warning</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-warning-light)"
+            ></div>
+            <div class="swatch-name">warning-light</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-error)"
+            ></div>
+            <div class="swatch-name">error</div>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch-sample"
+              style="background: var(--color-error-light)"
+            ></div>
+            <div class="swatch-name">error-light</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== TYPOGRAPHY ==================== -->
+      <section class="section" id="typography">
+        <h2 class="section-title">Typography</h2>
+
+        <h1>H1 — The quick brown fox jumps over the lazy dog</h1>
+        <br />
+        <h2>H2 — The quick brown fox jumps over the lazy dog</h2>
+        <br />
+        <h3>H3 — The quick brown fox jumps over the lazy dog</h3>
+        <br />
+        <h4>H4 — The quick brown fox jumps over the lazy dog</h4>
+        <br />
+        <h5>H5 — The quick brown fox jumps over the lazy dog</h5>
+        <br />
+        <h6>H6 — The quick brown fox jumps over the lazy dog</h6>
+        <br />
+        <p>
+          Body text — Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie
+          vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
+          porttitor.
+        </p>
+        <br />
+        <p>
+          <strong>Bold text</strong> · <em>Italic text</em> ·
+          <u>Underlined text</u> · <small>Small text</small> ·
+          <mark>Highlighted text</mark> · <code>Inline code</code>
+        </p>
+        <br />
+        <p class="text-sm">
+          Small body — Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris.
+        </p>
+        <p class="text-xs">
+          Extra small — Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore.
+        </p>
+        <br />
+        <blockquote>
+          <p>
+            "Blockquote — Education is the most powerful weapon which you can
+            use to change the world."
+          </p>
+          <footer>— Nelson Mandela</footer>
+        </blockquote>
+        <br />
+        <ul>
+          <li>Unordered list item one</li>
+          <li>
+            Unordered list item two
+            <ul>
+              <li>Nested item a</li>
+              <li>Nested item b</li>
+            </ul>
+          </li>
+          <li>Unordered list item three</li>
+        </ul>
+        <br />
+        <ol>
+          <li>Ordered list item one</li>
+          <li>Ordered list item two</li>
+          <li>Ordered list item three</li>
+        </ol>
+      </section>
+
+      <!-- ==================== BUTTONS ==================== -->
+      <section class="section" id="buttons">
+        <h2 class="section-title">Buttons</h2>
+        <div class="example-grid">
+          <button class="btn btn--primary">
+            <iconify-icon icon="lucide:save" width="16"></iconify-icon> Primary
+          </button>
+          <button class="btn btn--ghost">
+            <iconify-icon icon="lucide:arrow-left" width="16"></iconify-icon>
+            Ghost
+          </button>
+          <button class="btn btn--danger">
+            <iconify-icon icon="lucide:trash-2" width="16"></iconify-icon>
+            Danger
+          </button>
+          <button class="btn btn--primary" disabled>
+            <iconify-icon icon="lucide:save" width="16"></iconify-icon> Disabled
+          </button>
+        </div>
+        <br /><br />
+        <div class="example-grid">
+          <button class="btn btn--primary btn--sm">
+            <iconify-icon icon="lucide:plus" width="14"></iconify-icon> Small
+            Primary
+          </button>
+          <button class="btn btn--ghost btn--sm">
+            <iconify-icon icon="lucide:arrow-left" width="14"></iconify-icon>
+            Small Ghost
+          </button>
+        </div>
+        <br /><br />
+        <div class="example-grid">
+          <button class="btn btn--ghost">
+            <iconify-icon icon="lucide:download" width="16"></iconify-icon>
+          </button>
+          <button class="btn btn--ghost">
+            <iconify-icon icon="lucide:printer" width="16"></iconify-icon>
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== FORMS ==================== -->
+      <section class="section" id="forms">
+        <h2 class="section-title">Form Elements</h2>
+
+        <form style="display: grid; gap: var(--space-4); max-width: 32rem">
+          <div>
+            <label class="form-label" for="input-text">Text Input</label>
+            <input
+              class="form-input"
+              type="text"
+              id="input-text"
+              placeholder="Enter text…"
+            />
+            <span class="form-help">Helper text for additional context.</span>
+          </div>
+
+          <div>
+            <label class="form-label" for="input-email">Email Input</label>
+            <input
+              class="form-input"
+              type="email"
+              id="input-email"
+              placeholder="name@fmfi.uniba.sk"
+            />
+          </div>
+
+          <div>
+            <label class="form-label" for="input-password">Password</label>
+            <input
+              class="form-input"
+              type="password"
+              id="input-password"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <div>
+            <label class="form-label" for="input-disabled"
+              >Disabled Input</label
+            >
+            <input
+              class="form-input"
+              type="text"
+              id="input-disabled"
+              placeholder="Cannot edit"
+              disabled
+            />
+            <span class="form-help">This field is locked.</span>
+          </div>
+
+          <div>
+            <label class="form-label" for="input-error">Error State</label>
+            <input
+              class="form-input form-input--error"
+              type="text"
+              id="input-error"
+              value="Invalid value"
+            />
+            <span class="form-error">This field is required.</span>
+          </div>
+
+          <div class="form-row">
+            <input class="form-input" type="text" placeholder="Search…" />
+            <button class="btn btn--primary" type="submit">Search</button>
+          </div>
+
+          <div>
+            <label class="form-label" for="select-demo">Select</label>
+            <select class="form-select" id="select-demo">
+              <option>Choose an option…</option>
+              <option>Option A</option>
+              <option>Option B</option>
+              <option>Option C</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="form-label" for="textarea-demo">Textarea</label>
+            <textarea
+              class="form-input"
+              id="textarea-demo"
+              rows="4"
+              placeholder="Write something…"
+            ></textarea>
+          </div>
+
+          <fieldset>
+            <legend class="form-label">Checkboxes</legend>
+            <label class="form-check"
+              ><input type="checkbox" /> Option one</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" checked /> Option two (checked)</label
+            >
+            <label class="form-check"
+              ><input type="checkbox" disabled /> Option three (disabled)</label
+            >
+          </fieldset>
+
+          <fieldset>
+            <legend class="form-label">Radio Buttons</legend>
+            <label class="form-check"
+              ><input type="radio" name="radio-demo" /> Radio A</label
+            >
+            <label class="form-check"
+              ><input type="radio" name="radio-demo" checked /> Radio B</label
+            >
+            <label class="form-check"
+              ><input type="radio" name="radio-demo" /> Radio C</label
+            >
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- ==================== TABLE ==================== -->
+      <section class="section" id="table">
+        <h2 class="section-title">Table</h2>
+        <h3>Basic</h3>
+        <div class="table-scroll">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Meno</th>
+                <th>Priezvisko</th>
+                <th>Email</th>
+                <th>Rola</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1042</td>
+                <td>Ján</td>
+                <td>Novák</td>
+                <td>jan.novak@fmfi.uniba.sk</td>
+                <td>Študent</td>
+                <td>
+                  <div class="table-actions">
+                    <a href="#" class="table-action"
+                      ><iconify-icon
+                        icon="lucide:pencil"
+                        width="14"
+                      ></iconify-icon>
+                      Upraviť</a
+                    >
+                    <a href="#" class="table-action table-action--danger"
+                      ><iconify-icon
+                        icon="lucide:trash-2"
+                        width="14"
+                      ></iconify-icon>
+                      Odstrániť</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr class="row--highlight">
+                <td>1087</td>
+                <td>Mária</td>
+                <td>Kováčová</td>
+                <td>maria.kovacova@fmfi.uniba.sk</td>
+                <td>Učiteľ</td>
+                <td>
+                  <div class="table-actions">
+                    <a href="#" class="table-action"
+                      ><iconify-icon
+                        icon="lucide:pencil"
+                        width="14"
+                      ></iconify-icon>
+                      Upraviť</a
+                    >
+                    <a href="#" class="table-action table-action--danger"
+                      ><iconify-icon
+                        icon="lucide:trash-2"
+                        width="14"
+                      ></iconify-icon>
+                      Odstrániť</a
+                    >
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1156</td>
+                <td>Peter</td>
+                <td>Horváth</td>
+                <td>peter.horvath@fmfi.uniba.sk</td>
+                <td>Študent</td>
+                <td>
+                  <div class="table-actions">
+                    <a href="#" class="table-action"
+                      ><iconify-icon
+                        icon="lucide:pencil"
+                        width="14"
+                      ></iconify-icon>
+                      Upraviť</a
+                    >
+                    <a href="#" class="table-action table-action--danger"
+                      ><iconify-icon
+                        icon="lucide:trash-2"
+                        width="14"
+                      ></iconify-icon>
+                      Odstrániť</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <nav class="pagination">
+          <a href="#" class="pagination__prev">← Predošlá</a>
+          <a href="#">1</a>
+          <span class="pagination__ellipsis">…</span>
+          <a href="#">4</a>
+          <span class="pagination__current">5</span>
+          <a href="#">6</a>
+          <span class="pagination__ellipsis">…</span>
+          <a href="#">20</a>
+          <a href="#" class="pagination__next">Ďalšia →</a>
+        </nav>
+
+        <br />
+        <p class="text-sm">
+          Row with <code>row--highlight</code> class → light yellow background.
+          Actions use <code>.table-action</code> and
+          <code>.table-action--danger</code>. Tabular nums keep IDs aligned.
+        </p>
+      </section>
+
+      <!-- ==================== CARD ==================== -->
+      <section class="section" id="card">
+        <h2 class="section-title">Cards</h2>
+        <div class="example-grid">
+          <div class="card" style="max-width: 22rem">
+            <div class="card__header">
+              <h3 class="card__title">Card Title</h3>
+              <button class="btn btn--ghost btn--sm">Edit</button>
+            </div>
+            <div class="card__body">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+            <div class="card__footer">
+              <button class="btn btn--primary btn--sm">Action</button>
+              <button class="btn btn--ghost btn--sm">Cancel</button>
+            </div>
+          </div>
+
+          <div class="card" style="max-width: 22rem">
+            <div class="card__header">
+              <h3 class="card__title">Without Button</h3>
+            </div>
+            <div class="card__body">
+              <p>
+                A card with no action in the header. The title simply sits on
+                the left.
+              </p>
+            </div>
+            <div class="card__footer">
+              <button class="btn btn--primary btn--sm">Action</button>
+              <button class="btn btn--ghost btn--sm">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== ALERT / MESSAGE ==================== -->
+      <section class="section" id="alerts">
+        <h2 class="section-title">Alerts</h2>
+        <div style="display: grid; gap: var(--space-2)">
+          <div class="alert alert--info">
+            <strong>Info:</strong> Toto je informačná správa.
+          </div>
+          <div class="alert alert--success">
+            <strong>Úspech:</strong> Operácia prebehla úspešne.
+          </div>
+          <div class="alert alert--warning">
+            <strong>Varovanie:</strong> Skontrolujte zadané údaje.
+          </div>
+          <div class="alert alert--error">
+            <strong>Chyba:</strong> Pri spracovaní požiadavky nastala chyba.
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== BADGE ==================== -->
+      <section class="section" id="badges">
+        <h2 class="section-title">Badges</h2>
+        <div class="example-grid">
+          <span class="badge">Default</span>
+          <span class="badge badge--primary">Primary</span>
+          <span class="badge badge--success">Success</span>
+          <span class="badge badge--warning">Warning</span>
+          <span class="badge badge--error">Error</span>
+        </div>
+      </section>
+
+      <!-- ==================== DROPDOWN ==================== -->
+      <section class="section" id="dropdown">
+        <h2 class="section-title">Dropdown</h2>
+        <div class="example-grid">
+          <div class="dropdown">
+            <button
+              class="btn btn--ghost dropdown__trigger"
+              aria-expanded="false"
+              aria-controls="dropdown-actions"
+            >
+              <iconify-icon
+                icon="lucide:more-horizontal"
+                width="16"
+              ></iconify-icon>
+              Akcie
+              <iconify-icon
+                icon="lucide:chevron-down"
+                width="14"
+              ></iconify-icon>
+            </button>
+            <div class="dropdown__menu" id="dropdown-actions">
+              <a href="#" class="dropdown__item"
+                ><iconify-icon icon="lucide:pencil" width="14"></iconify-icon>
+                Upraviť</a
+              >
+              <a href="#" class="dropdown__item"
+                ><iconify-icon icon="lucide:copy" width="14"></iconify-icon>
+                Duplikovať</a
+              >
+              <a href="#" class="dropdown__item"
+                ><iconify-icon icon="lucide:download" width="14"></iconify-icon>
+                Exportovať</a
+              >
+              <hr class="dropdown__divider" />
+              <button class="dropdown__item dropdown__item--danger">
+                <iconify-icon icon="lucide:trash-2" width="14"></iconify-icon>
+                Odstrániť
+              </button>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button
+              class="btn btn--primary dropdown__trigger"
+              aria-expanded="false"
+              aria-controls="dropdown-create"
+            >
+              <iconify-icon icon="lucide:plus" width="16"></iconify-icon>
+              Vytvoriť
+              <iconify-icon
+                icon="lucide:chevron-down"
+                width="14"
+              ></iconify-icon>
+            </button>
+            <div class="dropdown__menu" id="dropdown-create">
+              <a href="#" class="dropdown__item"
+                ><iconify-icon
+                  icon="lucide:file-text"
+                  width="14"
+                ></iconify-icon>
+                Nový dokument</a
+              >
+              <a href="#" class="dropdown__item"
+                ><iconify-icon icon="lucide:folder" width="14"></iconify-icon>
+                Nový priečinok</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== LAYOUT ==================== -->
+      <section class="section" id="layout">
+        <h2 class="section-title">Layout</h2>
+
+        <h3>2 Columns</h3>
+        <div class="grid grid--2">
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Column 1</h3>
+            </div>
+            <div class="card__body"><p>Content in the first column.</p></div>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Column 2</h3>
+            </div>
+            <div class="card__body"><p>Content in the second column.</p></div>
+          </div>
+        </div>
+        <br />
+
+        <h3>3 Columns</h3>
+        <div class="grid grid--3">
+          <div class="card">
+            <div class="card__header"><h3 class="card__title">Col 1</h3></div>
+            <div class="card__body"><p>First.</p></div>
+          </div>
+          <div class="card">
+            <div class="card__header"><h3 class="card__title">Col 2</h3></div>
+            <div class="card__body"><p>Second.</p></div>
+          </div>
+          <div class="card">
+            <div class="card__header"><h3 class="card__title">Col 3</h3></div>
+            <div class="card__body"><p>Third.</p></div>
+          </div>
+        </div>
+        <br />
+
+        <h3>4 Columns</h3>
+        <div class="grid grid--4">
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">42</div>
+              <div class="card__stat-label">Študentov</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">8</div>
+              <div class="card__stat-label">Predmetov</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">3</div>
+              <div class="card__stat-label">Úloh</div>
+            </div>
+          </div>
+          <div class="card card--stat">
+            <div class="card__body">
+              <div class="card__stat-value">1</div>
+              <div class="card__stat-label">Chýb</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© 2026 ŠVT FMFI UK</span>
+        <span>
+          <a href="#">Ochrana súkromia</a> ·
+          <a href="#">Podmienky používania</a> ·
+          <a href="#">Pomoc</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
