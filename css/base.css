@@ -45,6 +45,7 @@ h6 {
   font-weight: bold;
   line-height: var(--leading-tight);
   text-wrap: balance;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -118,6 +119,8 @@ a:hover {
 ul,
 ol {
   padding-left: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 ul {
