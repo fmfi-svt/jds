@@ -190,3 +190,8 @@ body {
 .page-content {
   flex: 1;
 }
+
+iconify-icon {
+  width: 1em;
+  height: 1em;
+}
