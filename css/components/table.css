@@ -71,3 +71,17 @@
 .table-action--danger:hover {
   color: var(--color-error);
 }
+
+.table th.orderable > a {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.table th.orderable.asc > a::after {
+  content: "↑";
+}
+
+.table th.orderable.desc > a::after {
+  content: "↓";
+}
