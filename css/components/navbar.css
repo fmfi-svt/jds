@@ -82,6 +82,9 @@
   color: var(--color-app-text);
   text-decoration: none;
   transition: background-color 0.15s;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .navbar__link:hover,
