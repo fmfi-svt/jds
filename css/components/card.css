@@ -12,6 +12,14 @@
   padding: var(--space-3) var(--space-4);
 }
 
+.card__body > :first-child {
+  margin-top: 0;
+}
+
+.card__body > :last-child {
+  margin-bottom: 0;
+}
+
 .card__header {
   display: flex;
   align-items: center;
