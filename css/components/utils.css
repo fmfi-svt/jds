@@ -1,3 +1,7 @@
+.icon-lg {
+  font-size: 1.375em;
+}
+
 .mt-1 {
   margin-top: var(--space-1);
 }
