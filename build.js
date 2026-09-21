@@ -1,4 +1,5 @@
 const esbuild = require('esbuild');
+const fs = require('node:fs/promises');
 
 const isDev = process.argv.includes('--watch');
 
@@ -9,6 +10,7 @@ const common = {
   loader: {
     '.otf': 'file',
     '.woff2': 'file',
+    '.jpg': 'file',
   },
 };
 
@@ -26,10 +28,12 @@ async function build() {
   });
 
   if (isDev) {
+    await fs.cp('assets', 'dist/assets', { recursive: true });
     await Promise.all([cssCtx.watch(), jsCtx.watch()]);
     console.log('Watching for changes...');
   } else {
     await Promise.all([cssCtx.rebuild(), jsCtx.rebuild()]);
+    await fs.cp('assets', 'dist/assets', { recursive: true });
     await Promise.all([cssCtx.dispose(), jsCtx.dispose()]);
     console.log('Built dist/');
   }

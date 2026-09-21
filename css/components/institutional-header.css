@@ -25,3 +25,21 @@
 .institutional-header a:hover {
   text-decoration: underline;
 }
+
+.institutional-header--large {
+  height: 8rem;
+  background: var(--color-gray-900) url("../../assets/fmfi_banner.jpg") center / cover no-repeat;
+}
+
+.institutional-header--large .institutional-header__inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-3);
+}
+
+.institutional-header__logo {
+  display: block;
+  height: 4.5rem;
+  width: auto;
+}

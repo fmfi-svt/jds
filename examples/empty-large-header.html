@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMFI JDS — Large institutional header</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <script src="https://code.iconify.design/iconify-icon/2.3.0/iconify-icon.min.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/dropdown.js"></script>
+  </head>
+  <body>
+    <header class="institutional-header institutional-header--large">
+      <div class="institutional-header__inner">
+        <a href="https://fmph.uniba.sk" aria-label="FMFI UK">
+          <img
+            class="institutional-header__logo"
+            src="../assets/fmfi.svg"
+            alt="FMFI UK"
+          />
+        </a>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <div class="navbar__inner">
+        <a href="#" class="navbar__brand">
+          <iconify-icon icon="lucide:flask-conical" width="20"></iconify-icon>
+          Používatelia
+        </a>
+        <button
+          class="navbar__toggle"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <iconify-icon
+            icon="lucide:menu"
+            class="navbar__toggle-open"
+            width="22"
+          ></iconify-icon>
+          <iconify-icon
+            icon="lucide:x"
+            class="navbar__toggle-close"
+            width="22"
+          ></iconify-icon>
+        </button>
+        <div class="navbar__nav" id="main-nav">
+          <a href="#" class="navbar__link navbar__link--active">
+            <iconify-icon
+              icon="lucide:layout-dashboard"
+              width="16"
+            ></iconify-icon>
+            Prehľad
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon
+              icon="lucide:graduation-cap"
+              width="16"
+            ></iconify-icon>
+            Predmety
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon icon="lucide:calendar" width="16"></iconify-icon>
+            Rozvrh
+          </a>
+          <a href="#" class="navbar__link">
+            <iconify-icon icon="lucide:settings" width="16"></iconify-icon>
+            Nastavenia
+          </a>
+          <span class="navbar__divider"></span>
+          <span class="navbar__text">
+            <iconify-icon icon="lucide:user-circle" width="16"></iconify-icon>
+            Jan Novák
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="page-content"></div>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span>© 2026 ŠVT FMFI UK</span>
+        <span>
+          <a href="#">Ochrana súkromia</a> ·
+          <a href="#">Podmienky používania</a> ·
+          <a href="#">Pomoc</a>
+        </span>
+      </div>
+    </footer>
+  </body>
+</html>
